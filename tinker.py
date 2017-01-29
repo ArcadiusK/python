@@ -1,3 +1,5 @@
 print(a//b)
 print(a%b)
 print(divmod(a,b))
+print(pow(a,b))
+print(pow(a,b,m))
