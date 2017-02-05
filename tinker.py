@@ -21,3 +21,10 @@ word, k = map(str, input().split())
 for i in range(int(k)):
     for item in list(combinations(sorted(word),i+1)):
         print("".join(item))
+
+from dateutil import tz          
+from_zone = tz.gettz('UTC')
+to_newyork_zone = tz.gettz('America/New_York')         
+utc_time = datetime.datetime.strptime(datetime.now(), '%Y-%m-%dT%H:%M:%S.%fZ')
+utc_time = utc_time.replace(tzinfo=from_zone)
+eastern_time = utc_time.astimezone(to_newyork_zone)
