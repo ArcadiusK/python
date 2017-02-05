@@ -15,3 +15,9 @@ from itertools import permutations
 word, p = map(str, input().split())
 for item in sorted(permutations(word, int(p))):
      print("".join(item))
+
+from itertools import combinations
+word, k = map(str, input().split())
+for i in range(int(k)):
+    for item in list(combinations(sorted(word),i+1)):
+        print("".join(item))
