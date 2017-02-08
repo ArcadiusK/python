@@ -1,3 +1,9 @@
+import datetime
+n = int(input())
+for i in range(n):
+    print(abs(int((datetime.datetime.strptime(input(), '%a %d %b %Y %H:%M:%S %z') 
+          - datetime.datetime.strptime(input(), '%a %d %b %Y %H:%M:%S %z')).total_seconds())))
+
 print(a//b)
 print(a%b)
 print(divmod(a,b))
