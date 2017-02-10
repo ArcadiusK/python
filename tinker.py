@@ -1,3 +1,5 @@
+lines = [line.rstrip('\n') for line in file]
+
 import datetime
 for i in range(int(input())):
     print(abs(int((datetime.datetime.strptime(input(), '%a %d %b %Y %H:%M:%S %z') 
