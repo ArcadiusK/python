@@ -1,6 +1,5 @@
 import datetime
-n = int(input())
-for i in range(n):
+for i in range(int(input())):
     print(abs(int((datetime.datetime.strptime(input(), '%a %d %b %Y %H:%M:%S %z') 
           - datetime.datetime.strptime(input(), '%a %d %b %Y %H:%M:%S %z')).total_seconds())))
 
