@@ -1,3 +1,10 @@
+n, x = map(int, input().split())
+students = []
+for i in range(x):
+    students += [map(float, input().split())]
+for ele in zip(*students):
+    print(sum(ele)/x)
+
 lines = [line.rstrip('\n') for line in file]
 
 import datetime
