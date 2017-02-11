@@ -1,3 +1,6 @@
+x, k = map(int, input().split())
+print(eval('{}=={}'.format(input(),k)))
+
 n, x = map(int, input().split())
 students = []
 for i in range(x):
