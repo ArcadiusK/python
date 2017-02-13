@@ -1,3 +1,6 @@
+
+eval(input())
+
 x, k = map(int, input().split())
 print(eval('{}=={}'.format(input(),k)))
 
