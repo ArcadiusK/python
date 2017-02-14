@@ -1,3 +1,21 @@
+n = int(input())
+iss = list(map(int, input().split()))
+s= ""
+p=""
+for i in range(n):
+    if iss[i] > 0:
+        s = "good"
+    else:
+        s = bad
+        break
+if s == "good":
+    for i in range(n):
+        if str(iss[i]) == str(iss[i])[::-1]:
+            p = "good"
+            break
+        else:
+            p = "bad"
+print(s == "good" and p == "good")
 
 eval(input())
 
