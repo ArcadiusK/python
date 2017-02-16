@@ -1,3 +1,7 @@
+n = input();
+s = map(int, input().split())
+print(any(map(lambda x: str(x) == str(x)[::-1], s)) and all(map(lambda x: x>0, s)))
+
 n = int(input())
 iss = list(map(int, input().split()))
 s= ""
