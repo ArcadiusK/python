@@ -1,3 +1,19 @@
+cube = lambda x: x**3
+
+def fibonacci(n):
+    toreturn = []
+    a, b = 0, 1
+    if n == 1:
+        toreturn.append(0)
+    elif n > 1:    
+        toreturn.append(0)
+        toreturn.append(1)
+        for i in range(n-2):         
+            a, b = b, a + b    
+            toreturn.append(b)
+    return toreturn
+
+
 n = input();
 s = map(int, input().split())
 print(any(map(lambda x: str(x) == str(x)[::-1], s)) and all(map(lambda x: x>0, s)))
