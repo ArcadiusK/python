@@ -1,3 +1,12 @@
+n, m = map(int, input().split())
+elements = []
+for i in range(n):
+    elements.append(list(map(int, input().split())))
+column = int(input())
+for line in sorted(elements, key = lambda x: x[column]):
+    print(*line)
+
+
 def product(fracs):
     t = reduce(lambda x,y : x*y, fracs)
     return t.numerator, t.denominator
