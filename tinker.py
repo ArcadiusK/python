@@ -1,3 +1,5 @@
+print(*sorted(input(), key=lambda x: 'z'+ str(not (int(x) % 2)) + x if x.isdigit() else x.swapcase()), sep='')
+
 n, m = map(int, input().split())
 elements = []
 for i in range(n):
