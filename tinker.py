@@ -1,3 +1,10 @@
+import numpy
+n,m = map(int, input().split())
+lines = []
+for i in range(n):
+    lines.append(list(map(int, input().split())))
+print(numpy.prod(numpy.sum(lines, axis = 0)))
+
 print(*sorted(input(), key=lambda x: 'z'+ str(not (int(x) % 2)) + x if x.isdigit() else x.swapcase()), sep='')
 
 n, m = map(int, input().split())
