@@ -1,9 +1,10 @@
 import numpy
-n,m = map(int, input().split())
-lines = []
+n, m = map(int, input().split())
+my_array = []
 for i in range(n):
-    lines.append(list(map(int, input().split())))
-print(numpy.prod(numpy.sum(lines, axis = 0)))
+    my_array.append(list(map(int, input().split())))
+print(numpy.prod(numpy.sum(my_array, axis = 0)))
+print(numpy.max(numpy.min(my_array, axis = 1)))
 
 print(*sorted(input(), key=lambda x: 'z'+ str(not (int(x) % 2)) + x if x.isdigit() else x.swapcase()), sep='')
 
