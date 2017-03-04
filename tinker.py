@@ -16,7 +16,8 @@ column = int(input())
 for line in sorted(elements, key = lambda x: x[column]):
     print(*line)
 
-
+response = requests.put()
+    
 def product(fracs):
     t = reduce(lambda x,y : x*y, fracs)
     return t.numerator, t.denominator
