@@ -1,3 +1,12 @@
+def conn(x_tensor, num_outputs, apply_activation=True):
+     if(apply_activation):
+        return tf.nn.relu(fc_layer)
+    else:
+        return fc_layer
+    
+return conn(x_tensor, num_outputs, apply_activation=False)
+    
+
 import numpy
 n, m = map(int, input().split())
 my_array = []
