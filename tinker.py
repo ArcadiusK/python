@@ -6,7 +6,18 @@ def conn(x_tensor, num_outputs, apply_activation=True):
     
 return conn(x_tensor, num_outputs, apply_activation=False)
     
-
+print(sum([(ele in A) - (ele in B) for ele in ta]))     
+     
+ta, A, B = [input().split() for _ in range(4)][1:]
+A, B = set(A), set(B)
+happiness = 0
+for ele in ta:
+    if ele in A:
+        happiness += 1
+    elif ele in B:
+        happiness -= 1
+print(happiness)
+     
 import numpy
 n, m = map(int, input().split())
 my_array = []
