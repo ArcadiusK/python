@@ -5,6 +5,8 @@ def conn(x_tensor, num_outputs, apply_activation=True):
         return fc_layer
     
 return conn(x_tensor, num_outputs, apply_activation=False)
+
+print(str(round(math.degrees(math.atan(float(input())/float(input())))))+'°')
     
 print(sum([(ele in A) - (ele in B) for ele in ta]))     
      
