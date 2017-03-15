@@ -6,6 +6,11 @@ def conn(x_tensor, num_outputs, apply_activation=True):
     
 return conn(x_tensor, num_outputs, apply_activation=False)
 
+import numpy
+A, B = numpy.array(list(map(int, input().split()))), numpy.array(list(map(int, input().split())))
+print(numpy.inner(A, B))
+print(numpy.outer(A, B))
+
 print(str(round(math.degrees(math.atan(float(input())/float(input())))))+'°')
     
 print(sum([(ele in A) - (ele in B) for ele in ta]))     
