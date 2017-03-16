@@ -2,9 +2,22 @@ def conn(x_tensor, num_outputs, apply_activation=True):
      if(apply_activation):
         return tf.nn.relu(fc_layer)
     else:
-        return fc_layer
-    
+        return fc_layer    
 return conn(x_tensor, num_outputs, apply_activation=False)
+
+import collections
+mdict = collections.OrderedDict()
+counter_of_disctinct = 0
+for i in range(int(input())):
+    word = input()
+    if word in mdict:
+        mdict[word] +=1
+    else:
+        mdict[word] = 1
+        counter_of_distinct += 1
+print(counter_of_distinct)
+print(*mdict.values())
+    
 
 import numpy
 A, B = numpy.array(list(map(int, input().split()))), numpy.array(list(map(int, input().split())))
