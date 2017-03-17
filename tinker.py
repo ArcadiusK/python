@@ -5,6 +5,8 @@ def conn(x_tensor, num_outputs, apply_activation=True):
         return fc_layer    
 return conn(x_tensor, num_outputs, apply_activation=False)
 
+def find_needle(haystack): return 'found the needle at position %d' % haystack.index('needle')
+
 import collections
 mdict = collections.OrderedDict()
 counter_of_disctinct = 0
