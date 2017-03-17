@@ -62,7 +62,6 @@ def product(fracs):
     t = reduce(lambda x,y : x*y, fracs)
     return t.numerator, t.denominator
 
-
 cube = lambda x: x**3
 
 def fibonacci(n):
