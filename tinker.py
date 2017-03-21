@@ -5,6 +5,10 @@ def conn(x_tensor, num_outputs, apply_activation=True):
         return fc_layer    
 return conn(x_tensor, num_outputs, apply_activation=False)
 
+utc_time = datetime.datetime.strptime(parsed_json["trade_closed_at"], '%Y-%m-%dT%H:%M:%S.%fZ')
+utc_time = utc_time.replace(tzinfo=from_zone)
+eastern_time = utc_time.astimezone(to_newyork_zone)
+
 def find_needle(haystack): return 'found the needle at position %d' % haystack.index('needle')
 
 import collections
