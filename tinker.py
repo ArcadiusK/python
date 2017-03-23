@@ -3,7 +3,7 @@ def conn(x_tensor, num_outputs, apply_activation=True):
         return tf.nn.relu(fc_layer)
     else:
         return fc_layer    
-return conn(x_tensor, num_outputs, apply_activation)
+return conn(x_tensor, num_outputs, apply_activation=False)
 
 import itertools
 mlist = []
