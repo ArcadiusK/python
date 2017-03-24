@@ -5,6 +5,11 @@ def conn(x_tensor, num_outputs, apply_activation=True):
         return fc_layer    
 return conn(x_tensor, num_outputs, apply_activation=False)
 
+def start_repeating():
+    global next_call
+    next_call = next_call + 2
+    threading.Timer( next_call - time.time(), start_repeating).start()
+
 import itertools
 mlist = []
 for k, group in itertools.groupby(input()):
