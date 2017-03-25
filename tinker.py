@@ -7,7 +7,7 @@ return conn(x_tensor, num_outputs, apply_activation=False)
 
 def start_repeating():
     global next_call
-    next_call = next_call + 2
+    next_call = next_call + 1
     threading.Timer( next_call - time.time(), start_repeating).start()
 
 import itertools
