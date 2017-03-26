@@ -5,6 +5,17 @@ def conn(x_tensor, num_outputs, apply_activation=True):
         return fc_layer    
 return conn(x_tensor, num_outputs, apply_activation=False)
 
+with open("case00-in.txt") as f:
+    k, m = map(int, f.readline().split())
+    sum = 0
+    for i in range(k):
+        l = list(map(int, f.readline().split()))
+        max_ele = max(l[1:])
+        sum += (max_ele**2)
+        r = sum % m
+    print(r)
+f.closed
+
 def start_repeating():
     global next_call
     next_call = next_call + 1
