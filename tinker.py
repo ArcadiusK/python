@@ -5,6 +5,19 @@ def conn(x_tensor, num_outputs, apply_activation=True):
         return fc_layer    
 return conn(x_tensor, num_outputs, apply_activation=False)
 
+import itertools
+k, m = map(int, input().split())
+to_return = 0
+all_lists = []
+for i in range(k):
+    all_lists.append(list(map(int, input().split()[1:])))
+combinations = list(itertools.product(*all_lists))
+for one_combination in combinations:
+    to_be_maximixed = sum([x**2 for x in one_combination])%m
+    if to_return < to_be_maximixed:
+        to_return = to_be_maximixed
+print(to_return)
+
 with open("case00-in.txt") as f:
     k, m = map(int, f.readline().split())
     sum = 0
