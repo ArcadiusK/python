@@ -5,6 +5,20 @@ def conn(x_tensor, num_outputs, apply_activation=True):
         return fc_layer    
 return conn(x_tensor, num_outputs, apply_activation=False)
 
+n = int(input())
+for i in range(n):
+    tn = int(input())
+    tlist = list(map(int, input().split()))
+    for j in range(tn//2):
+        #print(tlist[j])
+        #print(tlist[-j-1:][0])
+        if tlist[j] >= tlist[-j-1:][0]:
+            to_return = "Yes"
+        else:
+            to_return = "No"
+            break
+    print(to_return)
+
 import itertools
 k, m = map(int, input().split())
 to_return = 0
