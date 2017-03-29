@@ -10,8 +10,6 @@ for i in range(n):
     tn = int(input())
     tlist = list(map(int, input().split()))
     for j in range(tn//2):
-        #print(tlist[j])
-        #print(tlist[-j-1:][0])
         if tlist[j] >= tlist[-j-1:][0]:
             to_return = "Yes"
         else:
