@@ -13,8 +13,11 @@ for i in range(n):
         if tlist[j] >= tlist[-j-1:][0]:
             to_return = "Yes"
         else:
-            to_return = "No"
-            break
+            if (tlist[j] >= tlist[j+1]) or (tlist[-j-1:][0] >= tlist[-j-2:][0]):
+                to_return = "Yes"
+            else:
+                to_return = "No"
+                break
     print(to_return)
 
 import itertools
