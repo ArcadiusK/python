@@ -13,7 +13,7 @@ for i in range(n):
         if tlist[j] >= tlist[-j-1:][0]:
             to_return = "Yes"
         else:
-            if (tlist[j] >= tlist[j+1]) or (tlist[-j-1:][0] >= tlist[-j-2:][0]):
+            if (tlist[j] >= tlist[j+1]) or (tlist[-j-1:][0] < tlist[-j-2:][len(tlist[-j-2:])-1]):
                 to_return = "Yes"
             else:
                 to_return = "No"
