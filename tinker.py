@@ -9,15 +9,14 @@ n = int(input())
 for i in range(n):
     tn = int(input())
     tlist = list(map(int, input().split()))
-    for j in range(tn//2):
-        if tlist[j] >= tlist[-j-1:][0]:
+    while len(tlist) > 0:
+        if tlist[0] >= tlist[len(tlist)-1]:
             to_return = "Yes"
+            del(tlist[0])
+            del(tlist[len(tlist)-1])
         else:
-            if (tlist[j] >= tlist[j+1]) or (tlist[-j-1:][0] < tlist[-j-1:][len(tlist[-j-1:])-1]):
-                to_return = "Yes"
-            else:
-                to_return = "No"
-                break
+            to_return = "No"
+            break
     print(to_return)
 
 import itertools
