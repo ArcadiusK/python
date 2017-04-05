@@ -5,19 +5,15 @@ def conn(x_tensor, num_outputs, apply_activation=True):
         return fc_layer    
 return conn(x_tensor, num_outputs, apply_activation=False)
 
-n = int(input())
-for i in range(n):
-    tn = int(input())
-    tlist = list(map(int, input().split()))
-    while len(tlist) > 0:
-        if tlist[0] >= tlist[len(tlist)-1]:
-            to_return = "Yes"
-            del(tlist[0])
-            del(tlist[len(tlist)-1])
-        else:
-            to_return = "No"
-            break
-    print(to_return)
+from collections import deque
+for i in range(int(input())):
+    n, q = int(input()), deque(map(int, input().split()))
+    for j in range(n - 1):
+        if q[0] >= q[1]: q.popleft()
+        elif q[-1] >= q[-2]: q.pop()
+        else: break
+    print("Yes" if len(q) == 1 else "No")
+
 
 import itertools
 k, m = map(int, input().split())
