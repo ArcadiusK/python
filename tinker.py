@@ -5,6 +5,15 @@ def conn(x_tensor, num_outputs, apply_activation=True):
         return fc_layer    
 return conn(x_tensor, num_outputs, apply_activation=False)
 
+d = {}
+for c in input():
+    if c in d: d[c] += 1
+    else: d[c] = 1
+sorted_d = sorted(d.items(), key=lambda x: (-x[1], x[0]))
+for t in sorted_d[0:3]:
+    print(*t)
+    
+
 from collections import deque
 for i in range(int(input())):
     n, q = int(input()), deque(map(int, input().split()))
