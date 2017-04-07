@@ -30,7 +30,7 @@ to_return = 0
 all_lists = []
 for i in range(k):
     all_lists.append(list(map(int, input().split()[1:])))
-combinations = list(itertools.product(*all_lists))
+combinations = list(itertools.product(all_lists))
 for one_combination in combinations:
     to_be_maximixed = sum([x**2 for x in one_combination])%m
     if to_return < to_be_maximixed:
