@@ -13,7 +13,17 @@ sorted_d = sorted(d.items(), key=lambda x: (-x[1], x[0]))
 for t in sorted_d[0:3]:
     print(*t)
     
-
+try:
+    # Loss and Optimizer
+    cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=logits, labels=y))
+    optimizer = tf.train.AdamOptimizer().minimize(cost)       
+except:
+    print("ARC Unexpected error:", sys.exc_info()[0])
+    cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=logits, labels=y))
+    optimizer = tf.train.AdadeltaOptimizer().minimize(cost)
+    raise
+     
+     
 from collections import deque
 for i in range(int(input())):
     n, q = int(input()), deque(map(int, input().split()))
