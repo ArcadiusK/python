@@ -13,6 +13,13 @@ sorted_d = sorted(d.items(), key=lambda x: (-x[1], x[0]))
 for t in sorted_d[0:3]:
     print(*t)
     
+     
+import numpy 
+a = []
+for i in range(int(input())):
+    a.append(list(map(float, input().split())))
+print(numpy.linalg.det(a))
+
 try:
     # Loss and Optimizer
     cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=logits, labels=y))
