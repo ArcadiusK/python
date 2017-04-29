@@ -32,7 +32,7 @@ except:
     optimizer = tf.train.AdadeltaOptimizer().minimize(cost)
     raise
      
-print(time.strftime("%H:%M:%S.%f"))
+print(time.strftime("%H:%M:%S:%f"))
      
 from collections import deque
 for i in range(int(input())):
