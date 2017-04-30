@@ -13,6 +13,13 @@ sorted_d = sorted(d.items(), key=lambda x: (-x[1], x[0]))
 for t in sorted_d[0:3]:
     print(*t)
     
+def person_lister(f):
+    def inner(people):
+        for one_person in sorted(people, key=lambda x: x[2]):
+            print(f(one_person))
+    return inner
+     
+     
  per_day_list = [1, 2, 3, 4, 5]
  print('%s' % ' '.join(map(str, per_day_list)))     
      
