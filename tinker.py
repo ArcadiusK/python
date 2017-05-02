@@ -18,7 +18,11 @@ def person_lister(f):
         for one_person in sorted(people, key=lambda x: x[2]):
             print(f(one_person))
     return inner
-     
+
+utc_zone = tz.gettz('UTC')
+nyc_zone = tz.gettz('America/New_York')
+nyc_time = datetime.datetime.now()
+utc_time = nyc_time.astimezone(utc_zone)
      
  per_day_list = [1, 2, 3, 4, 5]
  print('%s' % ' '.join(map(str, per_day_list)))     
