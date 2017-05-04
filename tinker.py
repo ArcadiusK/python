@@ -13,6 +13,9 @@ sorted_d = sorted(d.items(), key=lambda x: (-x[1], x[0]))
 for t in sorted_d[0:3]:
     print(*t)
     
+#when node is xml
+return(sum([len(i) for i in [_.attrib for _ in node.iter("*")] if i !={}]))
+     
 def person_lister(f):
     def inner(people):
         for one_person in sorted(people, key=lambda x: x[2]):
