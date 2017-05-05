@@ -13,6 +13,8 @@ sorted_d = sorted(d.items(), key=lambda x: (-x[1], x[0]))
 for t in sorted_d[0:3]:
     print(*t)
     
+ if (re.match("^[A-Za-z0-9_-]*$", username):     
+     
 #when node is xml
 return(sum([len(i) for i in [_.attrib for _ in node.iter("*")] if i !={}]))
      
