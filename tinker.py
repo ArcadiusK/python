@@ -13,8 +13,19 @@ sorted_d = sorted(d.items(), key=lambda x: (-x[1], x[0]))
 for t in sorted_d[0:3]:
     print(*t)
     
- if (re.match("^[A-Za-z0-9_-]*$", username):     
-     
+if (re.match("^[A-Za-z0-9_-]*$", username):     
+
+    
+def depth(elem, level):
+    global maxdepth
+    if (level == maxdepth):
+        maxdepth += 1      
+    for child in elem:
+        depth(child, level + 1)   
+tree = etree.ElementTree(etree.fromstring(xml))
+    depth(tree.getroot(), -1)
+    print(maxdepth)
+    
 #when node is xml
 return(sum([len(i) for i in [_.attrib for _ in node.iter("*")] if i !={}]))
      
