@@ -13,7 +13,7 @@ sorted_d = sorted(d.items(), key=lambda x: (-x[1], x[0]))
 for t in sorted_d[0:3]:
     print(*t)
     
-if (re.match("^[A-Za-z0-9_-]*$", username): 
+if (re.match("^[A-Za-z0-9_-]*$", username)
 print(bool(re.search(r"^[+-]?\d*\.\d+$",raw_input().strip())))
     
 sorted(list(filter(lambda x: re.search(r'^[\w\d-]+@[A-Za-z0-9]+\.\w?\w?\w$',x),lst)))
