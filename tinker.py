@@ -13,6 +13,11 @@ sorted_d = sorted(d.items(), key=lambda x: (-x[1], x[0]))
 for t in sorted_d[0:3]:
     print(*t)
     
+     
+import re
+s = re.search(r'([a-zA-Z0-9])\1', input())
+print(s.group(1) if s else -1)
+
 list_to_return = re.split("[.,]",input())     
 if (re.match("^[A-Za-z0-9_-]*$", username):
 print(bool(re.search(r"^[+-]?\d*\.\d+$",raw_input().strip())))
