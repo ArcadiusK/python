@@ -19,6 +19,7 @@ s = re.search(r'([a-zA-Z0-9])\1', input())
 print(s.group(1) if s else -1)
 
 m = re.search(r"\b(?=\w)" + re.escape(k) + "+"+r"\b(?!\w)", s)
+print(m.group(1))
 
 list_to_return = re.split("[.,]",input())     
 if (re.match("^[A-Za-z0-9_-]*$", username):
