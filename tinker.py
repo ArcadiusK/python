@@ -32,7 +32,6 @@ print(s.group(1) if s else -1)
 m = re.search(r"\b(?=\w)" + re.escape(k) + "+"+r"\b(?!\w)", s)
 print(m.group(1))
 
-import re
 list_to_return = re.split("[.,]",input())     
 if (re.match("^[A-Za-z0-9_-]*$", username):
 print(bool(re.search(r"^[+-]?\d*\.\d+$",raw_input().strip())))
