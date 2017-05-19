@@ -14,7 +14,6 @@ for t in sorted_d[0:3]:
     print(*t)
     
      
-import re
 s, k = input().strip(), input().strip()
 m = re.compile(k)
 groups = m.search(s)
