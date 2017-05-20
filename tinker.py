@@ -5,11 +5,13 @@ def conn(x_tensor, num_outputs, apply_activation=True):
         return fc_layer    
 return conn(x_tensor, num_outputs, apply_activation=True)
 
-d = {}
+my_dictionary = {}
 for c in input():
-    if c in d: d[c] += 1
-    else: d[c] = 1
-sorted_d = sorted(d.items(), key=lambda x: (-x[1], x[0]))
+    if c in my_dictionary: 
+        my_dictionary[c] += 1
+    else: 
+        my_dictionary[c] = 1
+sorted_d = sorted(my_dictionary.items(), key=lambda x: (-x[1], x[0]))
 for t in sorted_d[0:3]:
     print(*t)
     
