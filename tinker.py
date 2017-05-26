@@ -18,7 +18,8 @@ for t in sorted_d[0:3]:
      
 import re, sys
 [print(one_line_out) for one_line_input in sys.stdin for one_line_out in re.findall('[\s:](#[a-f0-9]{6}|#[a-f0-9]{3})', one_line_input, re.IGNORECASE)]     
-     
+
+import re
 s, k = input().strip(), input().strip()
 m = re.compile(k)
 groups = m.search(s)
