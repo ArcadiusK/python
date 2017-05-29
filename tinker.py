@@ -1,4 +1,6 @@
 import re, sys
+import numpy 
+
 
 def conn(x_tensor, num_outputs, apply_activation=True):
      if(apply_activation):
@@ -93,7 +95,7 @@ utc_time = nyc_time.astimezone(utc_zone)
  per_day_list = [1, 2, 3, 4, 5]
  print('%s' % ' '.join(map(str, per_day_list)))     
      
-import numpy 
+
 a = []
 for i in range(int(input())):
     a.append(list(map(float, input().split())))
